@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+<script>
+    function phoneBank(){
+
+        while(true){
+
+            var input=prompt("====欢迎使用电话银行系统====\n查询请按1\n取款请按2\n转账请按3\n退出请按0");
+
+            if(input == 1){
+                alert("查询余额中，请稍后...");
+            }else if(input == 2){
+                alert("取款进行中，请稍后...");
+            }else if(input == 3){
+                alert("转账进行中，请稍后...");
+            }else if(input == 0){
+                alert("退出系统，谢谢使用");
+                break;
+            }else{
+                alert("输入有误，请重新输入");
+            }
+        }
+    }
+
+    function guess(){
+
+        var r = parseInt(Math.random()*100)+1;
+        console.log(r)
+        var count = 0;//记录次数
+        while(true){
+            var input = prompt("请输入一个数字：");
+
+            if(input == "exit"){
+                alert("退出游戏...");
+                break;
+            }
+            count++;//累加 游戏次数!
+            input=parseInt(input);
+            if(input > r){
+                alert("您猜大了!");
+            }else if(input < r){
+                alert("您猜小了!");
+            }else{
+                alert("您猜的正好!您一共猜了"+count+"次!");
+                break;
+            }
+        }
+    }
+</script>
+<button onclick="phoneBank();">访问电话银行</button>
+<button onclick="guess()">猜数字</button>
+</body>
+</html>
